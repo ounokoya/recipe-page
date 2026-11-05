@@ -48,6 +48,19 @@
   --radius-box: 0.75rem;
 }
 
+/* G3-1 : liens de l'attribution, soulignés sauf au survol ; contour de focus de 2 px décalé de 2 px */
+@utility link {
+  color: var(--color-link);
+  text-decoration-line: underline;
+  &:hover {
+    text-decoration-line: none;
+  }
+  &:focus-visible {
+    outline: 0.125rem solid var(--color-link);
+    outline-offset: 0.125rem;
+  }
+}
+
 /* titres de section (Ingredients, Instructions, Nutrition) */
 @utility section-title {
   font-family: var(--font-serif);
