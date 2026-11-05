@@ -47,6 +47,10 @@ Constats de la construction (Phase 6), sans écart restant :
 - Tableau : la 1re ligne n'a pas de trait au-dessus (47 px) ; la spec et S1 / S2 ont été corrigés (1611 et 1823). En desktop, le texte de l'image FM est 2 px plus bas dans sa ligne qu'en mobile.
 - Comparaisons visuelles avec `--disable-lcd-text` (texte lissé en gris, comme les images FM).
 
-## 4. Verdict
+## 4. En ligne (Phase 12)
+
+`BASE_URL=https://ounokoya.github.io/recipe-page/ npx playwright test --workers=2` : **31 réussis sur 31**, sur la v1.0.0 déployée depuis la branche `gh-pages` (dépôt public créé avec l'accord de Koya).
+
+## 5. Verdict
 
 Conforme à la spec et à la maquette validée (G3). Prêt pour la Phase 9 (README).
