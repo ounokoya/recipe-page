@@ -15,7 +15,9 @@ const STEPS = [
 ]
 const NUTRITION = [['Calories', '277kcal'], ['Carbs', '0g'], ['Protein', '20g'], ['Fat', '22g']]
 const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-const labelled = (label, rest) => new RegExp(`^\\s*${escape(label)}:\\s*${escape(rest)}\\s*$`)
+// les espaces du HTML (retours à la ligne, retraits) comptent comme un seul blanc
+const words = (s) => escape(s).replace(/ /g, '\\s+')
+const labelled = (label, rest) => new RegExp(`^\\s*${words(label)}:\\s*${words(rest)}\\s*$`)
 
 test.beforeEach(async ({ page }) => {
   await open(page, 1440, 1955)
