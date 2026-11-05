@@ -1,6 +1,6 @@
 # Maquette Penpot — Recipe page
 
-> SDL-FM 1.5.0 Phase 3 (remise à niveau, lot 1). Fichier Penpot : « FM Newbie » (créé par Koya ; nom vérifié avant chaque écriture), page « Recipe page ». **En attente de validation (G3).**
+> SDL-FM 1.5.0 Phase 3 (remise à niveau, lot 1). Fichier Penpot : « FM Newbie » (créé par Koya ; nom vérifié avant chaque écriture), page « Recipe page ». **Validée (G3, 2026-11-05)** avec les propositions : tablette (carte desktop à 64 px du haut, Q-B3), attribution FM en pied de page, seuils 5 % (desktop) et 6,8 % (mobile).
 > Décisions G2 appliquées : puces sur la première ligne (Q-B1), tableau `th scope="row"` + `td` (Q-B2, noms des calques), tablette proposée (Q-B3), texte alternatif de la photo (Q-B4), début des étapes en `strong`, « : » hors du gras (Q-B5).
 
 ## Rendu des exports

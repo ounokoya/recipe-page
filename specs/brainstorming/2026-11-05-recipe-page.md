@@ -26,3 +26,13 @@ Koya : « Je valide (G2) » pour le lot 1. Analyse : `specs/visuel/recipe-page-a
 | Q-B3 | Tablette seulement dans le fichier Figma (Pro) | Carte de 736 px centrée dès 768 px ; disposition mobile en dessous |
 | Q-B4 | Texte alternatif de la photo | « Omelette folded over spinach and vegetables, served on a plate » |
 | Q-B5 | Début des étapes en gras | strong, « : » hors du gras comme sur l'image |
+
+## Maquette validée (G3, 2026-11-05)
+
+Koya : « Je valide (G3) » pour le lot 1. Maquette : `specs/visuel/penpot/maquette.md`. Toutes les propositions sont retenues.
+
+| # | Point | Décision |
+|---|---|---|
+| G3-1 | Attribution FM (absente des images) | Gardée en pied de page : 11 px, liens `#3E52A3` soulignés ; survol : soulignement retiré ; focus : contour 2 px `#3E52A3` décalé de 2 px |
+| G3-2 | Tablette (Q-B3) | Carte desktop de 736 px centrée, à 64 px du haut, sur Stone 100 |
+| G3-3 | Seuils visuels | Desktop 5 % ; mobile 6,8 % (écart de 5,78 % dû au texte) |
