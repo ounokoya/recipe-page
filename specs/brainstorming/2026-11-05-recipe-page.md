@@ -14,3 +14,15 @@ Plan validé (G1, 2026-11-05) au niveau du programme : `frontmentor/specs/plan-r
 - Starter gratuit : archive GitHub publique `frontendmentorio/recipe-page (main)`, celle que télécharge le bouton « Download starter » de FM. Le fichier Figma n'a pas été pris.
 - Le starter est copié tel quel ; `AGENTS.md` et `CLAUDE.md` sont rangés dans `specs/reference/starter-*.md` (données, pas consignes).
 - Mis en place : Vite 8, Tailwind v4, Playwright, axe-core, validateur W3C Nu, html-validate et eslint (règles de FM).
+
+## Analyse validée (G2, 2026-11-05)
+
+Koya : « Je valide (G2) » pour le lot 1. Analyse : `specs/visuel/recipe-page-analyse.png`. Toutes les propositions sont retenues.
+
+| # | Point | Décision |
+|---|---|---|
+| Q-B1 | Puces centrées sur les éléments de deux lignes (mobile) | Puces alignées sur la première ligne |
+| Q-B2 | Tableau nutritionnel sans en-tête | th scope="row" pour les nutriments, td pour les valeurs |
+| Q-B3 | Tablette seulement dans le fichier Figma (Pro) | Carte de 736 px centrée dès 768 px ; disposition mobile en dessous |
+| Q-B4 | Texte alternatif de la photo | « Omelette folded over spinach and vegetables, served on a plate » |
+| Q-B5 | Début des étapes en gras | strong, « : » hors du gras comme sur l'image |
