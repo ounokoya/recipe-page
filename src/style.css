@@ -77,6 +77,14 @@
     padding-bottom: 0.6875rem;
     text-align: left;
   }
+  /* desktop : le texte de l'image FM est 2 px plus bas dans sa ligne */
+  @variant md {
+    & th,
+    & td {
+      padding-top: 0.875rem;
+      padding-bottom: 0.5625rem;
+    }
+  }
   & th {
     width: 50%;
     padding-left: 2rem;
