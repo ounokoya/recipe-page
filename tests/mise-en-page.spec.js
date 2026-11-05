@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test'
-import { open, recipe, photo, section, separators, rows, footer, box, near, textBox, style } from './helpers.js'
+import { open, recipe, photo, section, separators, rows, footer, box, near, textBox, style, cssColor } from './helpers.js'
 
 // Spec §4 — S1 à S5 (positions de la maquette Penpot, à 1 px près)
 
@@ -66,4 +66,12 @@ test('S5 — 1440 × 1955 : pied de page centré sous la carte', async ({ page }
 
   expect(f.y).toBeGreaterThanOrEqual(card.y + card.height)
   expect(Math.abs((t.left + t.right) / 2 - 720)).toBeLessThanOrEqual(1)
+})
+
+// Phase 8, écart E1 : sans fond déclaré, un navigateur en thème sombre peut montrer son propre fond sous la page
+test('E1 — 375 px : fond de page blanc déclaré, même si l\'appareil est en thème sombre', async ({ page }) => {
+  await page.emulateMedia({ colorScheme: 'dark' })
+  await open(page, 375, 800)
+  const background = await page.evaluate(() => getComputedStyle(document.body).backgroundColor)
+  expect(background).toBe(await cssColor(page, 'hsl(0, 0%, 100%)'))
 })
