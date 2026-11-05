@@ -2,6 +2,14 @@
 
 Format : [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) · Versions : [SemVer](https://semver.org/lang/fr/).
 
+## [1.0.1] — 2026-11-05
+
+Correctifs issus des vérifications automatiques de Frontend Mentor (`specs/analyse/2026-11-05-rapport-fm.md`).
+
+### Fixed
+- `src/style.css` : propriétés logiques au lieu des propriétés physiques (R1) et longueurs sur l'échelle d'espacement, en `calc()` (R2). Rendu identique.
+- Tests de garde « Règles FM — CSS » et « Règles FM — aria-label ».
+
 ## [1.0.0] — 2026-11-05
 
 Première version (SDL-FM 1.5.0, remise à niveau du profil, lot 1).
