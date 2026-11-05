@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test'
-import { open, photo, title, section, items, separators, rows, style } from './helpers.js'
+import { open, photo, title, section, items, separators, rows, style, cssColor } from './helpers.js'
 
 // Spec §2 et §3 — S6 à S12
 
@@ -14,7 +14,6 @@ const STEPS = [
   ['Enjoy', 'Serve hot, with additional salt and pepper if needed.'],
 ]
 const NUTRITION = [['Calories', '277kcal'], ['Carbs', '0g'], ['Protein', '20g'], ['Fat', '22g']]
-const BROWN = 'rgb(133, 70, 50)'
 const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 const labelled = (label, rest) => new RegExp(`^\\s*${escape(label)}:\\s*${escape(rest)}\\s*$`)
 
@@ -68,10 +67,11 @@ test('S11 — 2 séparateurs, entre Ingredients et Instructions, puis entre Inst
 })
 
 test('S12 — couleurs : titres de section, « Preparation time », valeurs nutritionnelles', async ({ page }) => {
+  const BROWN = await cssColor(page, 'hsl(14, 45%, 36%)')
   for (const name of ['Ingredients', 'Instructions', 'Nutrition']) {
     expect(await style(section(page, name).getByRole('heading', { level: 2 }), 'color'), name).toBe(BROWN)
   }
-  expect(await style(section(page, 'Preparation time').getByRole('heading', { level: 2 }), 'color')).toBe('rgb(123, 40, 79)')
+  expect(await style(section(page, 'Preparation time').getByRole('heading', { level: 2 }), 'color')).toBe(await cssColor(page, 'hsl(332, 51%, 32%)'))
   await expect(rows(page)).toHaveCount(4)
   for (let i = 0; i < 4; i++) {
     const cell = rows(page).nth(i).getByRole('cell')
