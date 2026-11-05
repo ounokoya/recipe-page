@@ -32,10 +32,73 @@
 
   --font-serif: "Young Serif", serif;
   --font-sans: "Outfit", sans-serif;
+  /* tailles de la maquette ; texte courant : text-base (16 px, interligne 1,5) */
+  --text-title: 2.5rem;
+  --text-title--line-height: 1;
+  --text-title-mobile: 2.25rem;
+  --text-title-mobile--line-height: 1;
+  --text-section: 1.75rem;
+  --text-section--line-height: 1;
+  --text-box-title: 1.25rem;
+  --text-box-title--line-height: 1.26;
+  --text-attribution: 0.6875rem;
+  --text-attribution--line-height: 1.5;
+
+  --radius-card: 1.5rem;
+  --radius-box: 0.75rem;
+}
+
+/* titres de section (Ingredients, Instructions, Nutrition) */
+@utility section-title {
+  font-family: var(--font-serif);
+  font-size: var(--text-section);
+  line-height: var(--text-section--line-height);
+  color: var(--color-brown-800);
+}
+
+/* listes de la recette : texte à 2,5rem du bord, un élément tous les 2rem ; puces sur la 1re ligne (Q-B1, ADR-0006) */
+@utility recipe-list {
+  /* la puce se place contre le bord de l'élément : le retrait de l'élément l'éloigne du texte (2rem en tout) */
+  padding-left: 1.5625rem;
+  & > li {
+    padding-left: 0.9375rem;
+  }
+  & > li + li {
+    margin-top: 0.5rem;
+  }
+}
+
+/* tableau Nutrition (Q-B2) : lignes de 3rem séparées par un trait, valeur à mi-largeur */
+@utility nutrition-table {
+  width: 100%;
+  & th,
+  & td {
+    padding-top: 0.75rem;
+    padding-bottom: 0.6875rem;
+    text-align: left;
+  }
+  & th {
+    width: 50%;
+    padding-left: 2rem;
+    font-weight: 400;
+  }
+  & td {
+    padding-left: 0.5rem;
+    font-weight: 700;
+    color: var(--color-brown-800);
+  }
+  & tr + tr {
+    border-top: 0.0625rem solid var(--color-stone-150);
+  }
+  & tr:last-child > * {
+    padding-bottom: 0;
+  }
 }
 
 @layer base {
   body {
     @apply font-sans text-base text-stone-600;
+    /* largeurs de lettres non arrondies au pixel (TTF du starter) : les lignes se coupent comme sur l'image FM */
+    text-rendering: geometricPrecision;
   }
 }
