@@ -24,6 +24,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Links
 
+- Solution URL: [frontendmentor.io/solutions/recipe-page-with-native-lists-a-data-table-tailwind-v4-and-playwright-NFulTTqYoZ](https://www.frontendmentor.io/solutions/recipe-page-with-native-lists-a-data-table-tailwind-v4-and-playwright-NFulTTqYoZ)
 - Live Site URL: [ounokoya.github.io/recipe-page](https://ounokoya.github.io/recipe-page/)
 
 ## My process
