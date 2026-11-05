@@ -36,3 +36,10 @@ Koya : « Je valide (G3) » pour le lot 1. Maquette : `specs/visuel/penpot/maque
 | G3-1 | Attribution FM (absente des images) | Gardée en pied de page : 11 px, liens `#3E52A3` soulignés ; survol : soulignement retiré ; focus : contour 2 px `#3E52A3` décalé de 2 px |
 | G3-2 | Tablette (Q-B3) | Carte desktop de 736 px centrée, à 64 px du haut, sur Stone 100 |
 | G3-3 | Seuils visuels | Desktop 5 % ; mobile 6,8 % (écart de 5,78 % dû au texte) |
+
+## Spec, ADR et verrou code (2026-11-05)
+
+- Spec : `specs/specifications/recipe-page.md` ; tests écrits avant le code, contrôle rouge fait (voir les commits `test:`).
+- ADR : `specs/adr/v1.0/` (ADR-0003 à ADR-0006).
+- **Verrou code** : Koya confirme « Claude écrit le code ».
+
