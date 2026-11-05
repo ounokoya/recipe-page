@@ -6,6 +6,7 @@ import { open, recipe, photo, section, separators, rows, footer, box, near, text
 async function table(page, { x, width, ys, label, value }) {
   near(await box(page.getByRole('table')), { x, width }, 'tableau')
   await expect(rows(page)).toHaveCount(4)
+  // lignes 2 à 4 : leur trait du haut est celui de l'image ; la ligne 1, sans trait, fait 47 px
   for (const [i, y] of ys.entries()) near(await box(rows(page).nth(i)), { y }, `ligne ${i + 1}`)
   // position du texte lui-même : ± 2 px (approche des lettres)
   const l = await textBox(page.getByRole('rowheader', { name: 'Calories' }))
@@ -26,7 +27,7 @@ test('S1 — 1440 × 1955 : carte, photo, encadré, séparateurs et tableau de l
   near(await box(photo(page)), { x: 392, y: 163, width: 656, height: 300 }, 'photo')
   near(await box(section(page, 'Preparation time')), { x: 392, y: 647, width: 656, height: 180 }, 'Preparation time')
   await rules(page, 392, 656, [1094, 1490])
-  await table(page, { x: 392, width: 656, ys: [1610, 1658, 1706, 1754], label: 424, value: 728 })
+  await table(page, { x: 392, width: 656, ys: [1611, 1658, 1706, 1754], label: 424, value: 728 })
 })
 
 test('S2 — 375 × 2043 : pas de carte, photo pleine largeur, pied de page sous la maquette', async ({ page }) => {
@@ -37,7 +38,7 @@ test('S2 — 375 × 2043 : pas de carte, photo pleine largeur, pied de page sous
   near(await box(photo(page)), { x: 0, y: 0, width: 375, height: 171 }, 'photo')
   near(await box(section(page, 'Preparation time')), { x: 32, y: 464, width: 311, height: 191 }, 'Preparation time')
   await rules(page, 32, 311, [946, 1678])
-  await table(page, { x: 32, width: 311, ys: [1822, 1870, 1918, 1966], label: 64, value: 196 })
+  await table(page, { x: 32, width: 311, ys: [1823, 1870, 1918, 1966], label: 64, value: 196 })
   expect((await box(footer(page))).y).toBeGreaterThanOrEqual(2043)
 })
 

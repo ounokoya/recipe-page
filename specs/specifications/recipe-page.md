@@ -53,7 +53,7 @@ Positions de la maquette, à 1 px près :
 | Photo | (392, 163) 656 × 300, rayon 12 | (0, 0) 375 × 171 | — |
 | Preparation time (encadré) | (392, 647) 656 × 180 | (32, 464) 311 × 191 | — |
 | Séparateurs | y 1094 et 1490, x 392, largeur 656 | y 946 et 1678, x 32, largeur 311 | — |
-| Tableau | x 392, largeur 656 ; lignes de 48 px à y 1610, 1658, 1706, 1754 | x 32, largeur 311 ; lignes à y 1822, 1870, 1918, 1966 | — |
+| Tableau | x 392, largeur 656 ; lignes à y 1611, 1658, 1706, 1754 (traits à 1658, 1706, 1754 ; 48 px de trait à trait) | x 32, largeur 311 ; lignes à y 1823, 1870, 1918, 1966 | — |
 | Nutriment, valeur (texte) | x 424 et 728 | x 64 et 196 | — |
 
 Les puces des éléments de deux lignes sont alignées sur la première ligne (Q-B1) : vérifié par la comparaison visuelle et le parcours réel (Phase 8).
@@ -100,10 +100,10 @@ Rien d'autre n'est interactif ; la page n'a aucune animation.
 ```
 Mise en page (positions de la maquette, à 1 px près)
 S1  Given 1440 × 1955  Then carte (352, 123) 736 × 1708 ; photo (392, 163) 656 × 300 ; encadré (392, 647) 656 × 180 ;
-                       séparateurs à y 1094 et 1490 ; tableau à x 392, largeur 656, lignes à y 1610, 1658, 1706, 1754 ;
+                       séparateurs à y 1094 et 1490 ; tableau à x 392, largeur 656, lignes à y 1611, 1658, 1706, 1754 ;
                        textes du tableau à x 424 et 728
 S2  Given 375 × 2043   Then pas de carte ; photo (0, 0) 375 × 171 ; encadré (32, 464) 311 × 191 ; séparateurs à y 946 et 1678 ;
-                       tableau à x 32, largeur 311, lignes à y 1822, 1870, 1918, 1966 ; textes du tableau à x 64 et 196 ;
+                       tableau à x 32, largeur 311, lignes à y 1823, 1870, 1918, 1966 ; textes du tableau à x 64 et 196 ;
                        le pied de page commence sous y = 2043
 S3  Given 768 px       Then carte (16, 64) 736 × 1708 ; given 1024 px  Then carte (144, 123) 736 × 1708
 S4  Given 320, 767, 768, 1023, 1024, 1440 px  Then pas de défilement horizontal
